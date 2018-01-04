@@ -16,12 +16,6 @@ function run_build { #build docker container
 	docker tag nerdalize/openfoam nerdalize/openfoam:`cat VERSION`
 }
 
-function run_buildpush { #build and push docker container
-	run_build
-	docker push nerdalize/openfoam
-	docker push nerdalize/openfoam:`cat VERSION`
-}
-
 case $1 in
 	"build") run_build ;;
 	"buildpush") run_buildpush ;;
