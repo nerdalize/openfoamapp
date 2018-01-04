@@ -5,6 +5,8 @@ source /opt/openfoam5/etc/bashrc
 
 OPENFOAM_RUN_FILE=${OPENFOAM_RUN_FILE:-"./run.sh"}
 
+FOAM_RUN=/home/openfoam/run
+
 # backup input files
 mkdir -p $FOAM_RUN
 cp -pr /input/* $FOAM_RUN
@@ -19,6 +21,7 @@ then
 fi
 
 # start simulation
+chmod +x $openfoam_script
 $openfoam_script "$@"
 
 # copy all input files and results to output folder
