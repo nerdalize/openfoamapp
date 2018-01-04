@@ -5,6 +5,6 @@ This OpenFOAM image is a very thin wrapper around the default OpenFOAM image (ht
 ## How does it work?
 
 This image adds a new entrypoint to the default OpenFOAM image. The entrypoint executes three sequential steps:
-1. All files in `/input` are copied to the `$FOAM_RUN` folder. Note that the files in `/input` were uploaded using `nerd dataset upload`.
+1. All files in `/input` are copied to the `$FOAM_RUN` folder. Note that the files from the input dataset are automatically placed in `/input`.
 2. The specified run script is executed. This file can be set with `$OPENFOAM_RUN_FILE`. The default value is `./run.sh`.
 3. All files from the `$FOAM_RUN` folder are copied to `/output`, so they can be downloaded using `nerd dataset download`.
