@@ -3,8 +3,8 @@
 # set right environment
 source /opt/openfoam5/etc/bashrc
 
+# make run file editable
 OPENFOAM_RUN_FILE=${OPENFOAM_RUN_FILE:-"./run.sh"}
-
 FOAM_RUN=/home/openfoam/run
 
 # backup input files
